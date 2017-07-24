@@ -2,12 +2,12 @@ process.env.NODE_ENV = 'test';
 
 const expect = require('chai').expect;
 
-let app = require('../index.js');
+const app = require('../index.js');
 
 describe('OMS Form filling:', () => {
     it('fill in the test data', () => {
-        let url = 'http://oms.sakhanet.ru:81/webpoisk/';
-        let formData = {
+        const url = 'http://oms.sakhanet.ru:81/webpoisk/';
+        const formData = {
             surname: 'Аргунов',
             name: 'Афанасий',
             patronymic: 'Александрович',
@@ -15,17 +15,16 @@ describe('OMS Form filling:', () => {
         };
         return app(url, formData)
             .then(res => {
-                console.log(res);
                 return expect(res).to.have.property('polis');
             });
     });
     it('not enough data error handling', () => {
-        let reject = {
+        const reject = {
             name: 'parameters error',
             message: 'not enough parameters data'
         };
-        let url = 'http://oms.sakhanet.ru:81/webpoisk/';
-        let formData = {
+        const url = 'http://oms.sakhanet.ru:81/webpoisk/';
+        const formData = {
             surname: 'Аргунов',
             patronymic: 'Александрович',
             birthDate: '07.03.1984'

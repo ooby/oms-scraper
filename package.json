@@ -1,11 +1,15 @@
 {
   "name": "oms-scraper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sakha OMS iFrame scraper",
   "main": "index.js",
   "scripts": {
     "start": "node .",
     "test": "mocha ./test --timeout 30000"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
   "repository": {
     "type": "git",
@@ -23,8 +27,7 @@
   },
   "homepage": "https://github.com/ooby/oms-scraper#readme",
   "dependencies": {
-    "nightmare": "^2.10.0",
-    "d3-dsv": "^1.0.5"
+    "nightmare": "^2.10.0"
   },
   "devDependencies": {
     "mocha": "^3.4.2",
