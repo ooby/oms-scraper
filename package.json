@@ -1,6 +1,6 @@
 {
   "name": "oms-scraper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Sakha OMS iFrame scraper",
   "main": "index.js",
   "scripts": {
